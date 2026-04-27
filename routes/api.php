@@ -290,7 +290,7 @@ Route::prefix('v1')->group(function () {
                 Route::get('admin/procedures', [SettingsController::class, 'proceduresIndex'])->name('procedures.index');
                 Route::get('admin/products', [SettingsController::class, 'productsIndex'])->name('products.index');
                 Route::get('admin/product-categories', [SettingsController::class, 'productCategoriesIndex'])->name('product-categories.index');
-                Route::get('admin/expense-categories', [SettingsController::class, 'expenseCategoriesIndex'])->name('expense-categories.index');
+                Route::get('admin/expense-categories', [SettingsController::class, 'expenseCategoriesIndex'])->name('admin.expense-categories.index');
             });
             Route::middleware('permission:settings.manage')->group(function () {
                 // Rooms
@@ -322,9 +322,9 @@ Route::prefix('v1')->group(function () {
                 Route::put('admin/product-categories/{productCategory}', [SettingsController::class, 'productCategoriesUpdate'])->name('product-categories.update');
                 Route::delete('admin/product-categories/{productCategory}', [SettingsController::class, 'productCategoriesDestroy'])->name('product-categories.destroy');
                 // Expense Categories
-                Route::post('admin/expense-categories', [SettingsController::class, 'expenseCategoriesStore'])->name('expense-categories.store');
-                Route::put('admin/expense-categories/{expenseCategory}', [SettingsController::class, 'expenseCategoriesUpdate'])->name('expense-categories.update');
-                Route::delete('admin/expense-categories/{expenseCategory}', [SettingsController::class, 'expenseCategoriesDestroy'])->name('expense-categories.destroy');
+                Route::post('admin/expense-categories', [SettingsController::class, 'expenseCategoriesStore'])->name('admin.expense-categories.store');
+                Route::put('admin/expense-categories/{expenseCategory}', [SettingsController::class, 'expenseCategoriesUpdate'])->name('admin.expense-categories.update');
+                Route::delete('admin/expense-categories/{expenseCategory}', [SettingsController::class, 'expenseCategoriesDestroy'])->name('admin.expense-categories.destroy');
                 // Reorder
                 Route::post('admin/{entity}/reorder', [SettingsController::class, 'reorder'])->name('settings.reorder');
             });
