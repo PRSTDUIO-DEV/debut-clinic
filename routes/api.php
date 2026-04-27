@@ -154,27 +154,27 @@ Route::prefix('v1')->group(function () {
 
             // Reports
             Route::middleware('permission:finance.reports.view')->group(function () {
-                Route::get('reports/payment-mix', [ReportController::class, 'paymentMix'])->name('reports.payment-mix');
-                Route::get('reports/daily-pl', [ReportController::class, 'dailyPL'])->name('reports.daily-pl');
-                Route::get('reports/doctor-performance', [ReportController::class, 'doctorPerformance'])->name('reports.doctor-performance');
-                Route::get('reports/procedure-performance', [ReportController::class, 'procedurePerformance'])->name('reports.procedure-performance');
+                Route::get('reports/payment-mix', [ReportController::class, 'paymentMix'])->name('api.reports.payment-mix');
+                Route::get('reports/daily-pl', [ReportController::class, 'dailyPL'])->name('api.reports.daily-pl');
+                Route::get('reports/doctor-performance', [ReportController::class, 'doctorPerformance'])->name('api.reports.doctor-performance');
+                Route::get('reports/procedure-performance', [ReportController::class, 'procedurePerformance'])->name('api.reports.procedure-performance');
                 // Sprint 15: 15 additional reports
-                Route::get('reports/revenue-by-customer-group', [ReportController::class, 'revenueByCustomerGroup'])->name('reports.revenue-by-customer-group');
-                Route::get('reports/revenue-by-source', [ReportController::class, 'revenueBySource'])->name('reports.revenue-by-source');
-                Route::get('reports/cohort-retention', [ReportController::class, 'cohortRetention'])->name('reports.cohort-retention');
-                Route::get('reports/demographics', [ReportController::class, 'demographics'])->name('reports.demographics');
-                Route::get('reports/stock-value', [ReportController::class, 'stockValueSnapshot'])->name('reports.stock-value');
-                Route::get('reports/receiving-history', [ReportController::class, 'receivingHistory'])->name('reports.receiving-history');
-                Route::get('reports/course-outstanding', [ReportController::class, 'courseOutstanding'])->name('reports.course-outstanding');
-                Route::get('reports/wallet-outstanding', [ReportController::class, 'walletOutstanding'])->name('reports.wallet-outstanding');
-                Route::get('reports/member-topup-trend', [ReportController::class, 'memberTopupTrend'])->name('reports.member-topup-trend');
-                Route::get('reports/commission-pending-vs-paid', [ReportController::class, 'commissionPendingVsPaid'])->name('reports.commission-pending-vs-paid');
-                Route::get('reports/birthday-this-month', [ReportController::class, 'birthdayThisMonth'])->name('reports.birthday-this-month');
-                Route::get('reports/lab-turnaround', [ReportController::class, 'labTurnaround'])->name('reports.lab-turnaround');
-                Route::get('reports/doctor-utilization', [ReportController::class, 'doctorUtilization'])->name('reports.doctor-utilization');
-                Route::get('reports/room-utilization', [ReportController::class, 'roomUtilization'])->name('reports.room-utilization');
-                Route::get('reports/photo-upload-frequency', [ReportController::class, 'photoUploadFrequency'])->name('reports.photo-upload-frequency');
-                Route::get('reports/refund-history', [ReportController::class, 'refundHistory'])->name('reports.refund-history');
+                Route::get('reports/revenue-by-customer-group', [ReportController::class, 'revenueByCustomerGroup'])->name('api.reports.revenue-by-customer-group');
+                Route::get('reports/revenue-by-source', [ReportController::class, 'revenueBySource'])->name('api.reports.revenue-by-source');
+                Route::get('reports/cohort-retention', [ReportController::class, 'cohortRetention'])->name('api.reports.cohort-retention');
+                Route::get('reports/demographics', [ReportController::class, 'demographics'])->name('api.reports.demographics');
+                Route::get('reports/stock-value', [ReportController::class, 'stockValueSnapshot'])->name('api.reports.stock-value');
+                Route::get('reports/receiving-history', [ReportController::class, 'receivingHistory'])->name('api.reports.receiving-history');
+                Route::get('reports/course-outstanding', [ReportController::class, 'courseOutstanding'])->name('api.reports.course-outstanding');
+                Route::get('reports/wallet-outstanding', [ReportController::class, 'walletOutstanding'])->name('api.reports.wallet-outstanding');
+                Route::get('reports/member-topup-trend', [ReportController::class, 'memberTopupTrend'])->name('api.reports.member-topup-trend');
+                Route::get('reports/commission-pending-vs-paid', [ReportController::class, 'commissionPendingVsPaid'])->name('api.reports.commission-pending-vs-paid');
+                Route::get('reports/birthday-this-month', [ReportController::class, 'birthdayThisMonth'])->name('api.reports.birthday-this-month');
+                Route::get('reports/lab-turnaround', [ReportController::class, 'labTurnaround'])->name('api.reports.lab-turnaround');
+                Route::get('reports/doctor-utilization', [ReportController::class, 'doctorUtilization'])->name('api.reports.doctor-utilization');
+                Route::get('reports/room-utilization', [ReportController::class, 'roomUtilization'])->name('api.reports.room-utilization');
+                Route::get('reports/photo-upload-frequency', [ReportController::class, 'photoUploadFrequency'])->name('api.reports.photo-upload-frequency');
+                Route::get('reports/refund-history', [ReportController::class, 'refundHistory'])->name('api.reports.refund-history');
             });
 
             // MIS Executive
